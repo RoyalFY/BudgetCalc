@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-top: .5%;
+    font-family: "Kufam", sans-serif;
+}
+
+h2,
+h3 {
+    color: whitesmoke;
+    font-size: 2.5rem;
+}
+
+p {
+    font-weight: bold;
+}
+
+Body {
+    background-color: steelblue;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.spending {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.spending input {
+    text-align: left;
+    background: whitesmoke;
+    color: navy;
+}
+
+.salary input {
+    background: whitesmoke;
+    color: navy;
+    font-size: 1.9rem;
+}
+
+.column1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.Children {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: whitesmoke;
+    color: navy;
+    width: 400px;
+    height: 80px;
+    font-size: 35px;
+    border-radius: 0.5rem;
+}
+
+.jobs {
+    font-size: 36px;
+    height: 100px;
+    background: whitesmoke;
+    color: navy;
+    width: 80%;
+}
+
+#jobs {
+    width: 28rem;
+}
+
+.salary {
+    height: 80px;
+    border: none;
+}
+
+.spending {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+}
+
+.spending>h2 {
+    margin-top: 5%;
+}
+
+.column {
+    font-size: 32px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spendinginputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background: whitesmoke;
+    color: navy;
+    width: 28rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+}
+
+.spendinginputs>p {
+    padding-left: 3%;
+}
+
+.spendinginputs>input {
+    width: 50%;
+    background: navysmoke;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.input {
+    height: 80px !important;
+    border-radius: 0.5rem;
+    padding-right: 10rem;
+    border: none;
+}
+
+#Expenses {
+    position: absolute;
+    left: 21vw;
+    bottom: 0vh;
+    border: none;
+    border-bottom: solid 2px rgb(77, 77, 77) !important;
+    background-color: steelblue;
+    padding-right: 2rem;
+}
+
+
+.leftRight{
+    display: flex;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 2%;
+    background: whitesmoke;
+    color: navy;
+    width: 7rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-family: "Kufam", sans-serif;
+}
+
