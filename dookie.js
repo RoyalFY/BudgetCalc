@@ -54,16 +54,16 @@ async function init() {
     let url = 'https://eecu-data-server.vercel.app/data/2024';
 
     //create a variable to hold the JSON data
-    let occupations = null; 
-    
+    let occupations = null;
+
     //try to retrieve the JSON data from the server
     try {
         //retrieve the JSON data from the server
         occupations = await utils.getJSON(url);
     }
     //catch any errors and display them in the root element
-    catch(error){
-    console.log(`error: ${error}`);
+    catch (error) {
+        console.log(`error: ${error}`);
     }
 
     //show JSON data on the html page
@@ -72,43 +72,57 @@ async function init() {
 
 function buildList(jobs) {
 
-let marioMaker2 = document.getElementById(`jobs`)
+    let marioMaker2 = document.getElementById(`jobs`)
 
-for (let i of jobs) {
-    list.set(i.occupation, i.salary)
+    for (let i of jobs) {
+        list.set(i.occupation, i.salary)
+    }
+
+    list.forEach((fort, nite) => { marioMaker2.innerHTML += `<option value="${fort}">${nite}</option>` })
+
 }
 
-list.forEach((fort,nite) => {marioMaker2.innerHTML += `<option value="${fort}">${nite}</option>`})
-
-}
-
-document.addEventListener(`DOMContentLoaded`,() => {
+document.addEventListener(`DOMContentLoaded`, () => {
     init()
 
-    let elementById = function(id) {return document.getElementById(id)}
+    let elementById = function (id) { return document.getElementById(id) }
 
-    let addListener = function(id,event,code) {elementById(id).addEventListener(event,(eventData) => {code(eventData)})}
+    let addListener = function (id, event, code) { elementById(id).addEventListener(event, (eventData) => { code(eventData) }) }
 
-    // addListener(`AAAAAAAAAA`,`click`, (eventData) => {
-    //     let = taxes
-    //     `tax`/`salaryinput` == taxes
-    //     let = med
-    //     `med`/`salaryinput` == med
-    //     let = food
-    //     `food`/`salaryinput` == food
-    //     let = house
-    //     `house`/`salaryinput` == house
-    //     let = savings
-    //     `savings`/`salaryinput` == saving
-    //     let = travel
-    //     `travel`/`salaryinput` == travel
-    //     localStorage.setItem('taxes', taxes)
-    //     localStorage.setItem(`meds`, med)
-    //     localStorage.setItem(`foods`, food)
-    //     localStorage.setItem(`houses`, house)
-    //     localStorage.setItem(`saves`, saving)
-    //     localStorage.setItem(`travels`, travel)
-    
-    // })
+    let banana = new Chart(elementById(`chart`), {
+        type: 'pie',
+        data: {
+            labels: [
+                'Red',
+                'Blue',
+                'Yellow'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [1, 1, 1],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        }
+    })
 
+    addListener(`AAAAAAAAAA`, `click`, (eventData) => {
+        console.log(`buttonClick`)
+        let taxes = tax.value
+        let med = medical.value
+        let meal = food.value
+        let homes = house.value
+        let holdings = saving.value
+        let trav = travel.value
+        banana.data.datasets[0].data = [taxes, med, meal, homes, holdings, trav]
+        banana.data.labels = [`taxes`, `med`, `meal`, `homes`, `holdings`, `trav`]
+        banana.update()
+
+        elementById(`Expenses`).innerText = `Total Expenses: $${taxes + med + meal + homes + holdings + trav}`
+    })                                                             // ^^ they add togther like 12648 instead of 21, fix
 })
+

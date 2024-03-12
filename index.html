@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/dookie.js"></script>
+    <script type="module" src="/dookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -67,15 +68,13 @@
                     <input id="travel" type="text">
                 </div>
                 <section class="button">
-                    <button id="AAAAAAAAAA" onclick="helpme()">Submit</button>
+                    <button id="AAAAAAAAAA">Submit</button>
                 </section>
             </section>
-            <h2>Total Expenses:</h2>
-            <input type="text" id="Expenses">
+            <h2 id="Expenses">Total Expenses:</h2>
         </section>
         <section class="pieGraph">
             <div style="width: 800px;"><canvas id="chart"></canvas></div>
-            <script type="module" src="chart.js"></script>
         </section>
     </section>
 

@@ -1,0 +1,160 @@
+@import "https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap";
+* {
+  box-sizing: border-box;
+  margin: .5% 0 0;
+  padding: 0;
+  font-family: Kufam, sans-serif;
+}
+
+h2, h3 {
+  color: #f5f5f5;
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: bold;
+}
+
+Body {
+  background-color: #4682b4;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.spending {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.spending input {
+  text-align: left;
+  color: navy;
+  background: #f5f5f5;
+}
+
+.salary input {
+  color: navy;
+  background: #f5f5f5;
+  font-size: 1.9rem;
+}
+
+.column1 {
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Children {
+  color: navy;
+  background: #f5f5f5;
+  border-radius: .5rem;
+  flex-flow: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  font-size: 35px;
+  display: flex;
+}
+
+.jobs {
+  color: navy;
+  background: #f5f5f5;
+  width: 80%;
+  height: 100px;
+  font-size: 36px;
+}
+
+#jobs {
+  width: 28rem;
+}
+
+.salary {
+  border: none;
+  height: 80px;
+}
+
+.spending {
+  width: 50%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.spending > h2 {
+  margin-top: 5%;
+}
+
+.column {
+  flex-direction: column;
+  width: 20%;
+  font-size: 32px;
+  display: flex;
+}
+
+.spendinginputs {
+  color: navy;
+  background: #f5f5f5;
+  border-radius: .5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 28rem;
+  height: 4rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
+  display: flex;
+}
+
+.spendinginputs > p {
+  padding-left: 3%;
+}
+
+.spendinginputs > input {
+  background: navysmoke;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 50%;
+}
+
+.input {
+  border: none;
+  border-radius: .5rem;
+  padding-right: 10rem;
+  height: 80px !important;
+}
+
+#Expenses {
+  background-color: #4682b4;
+  border: none;
+  padding-right: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 21vw;
+  border-bottom: 2px solid #4d4d4d !important;
+}
+
+.leftRight {
+  display: flex;
+}
+
+button {
+  color: navy;
+  background: #f5f5f5;
+  border-radius: .5rem;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 2%;
+  font-family: Kufam, sans-serif;
+  display: flex;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */
