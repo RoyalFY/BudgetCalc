@@ -89,26 +89,26 @@ document.addEventListener(`DOMContentLoaded`,() => {
 
     let addListener = function(id,event,code) {elementById(id).addEventListener(event,(eventData) => {code(eventData)})}
 
-    addListener(`AAAAAAAAAA`,`click`, (eventData) => {
-        let = taxes
-        `tax`/`salaryinput` == taxes
-        let = med
-        `med`/`salaryinput` == med
-        let = food
-        `food`/`salaryinput` == food
-        let = house
-        `house`/`salaryinput` == house
-        let = savings
-        `savings`/`salaryinput` == saving
-        let = travel
-        `travel`/`salaryinput` == travel
-        localStorage.setItem('taxes', taxes)
-        localStorage.setItem(`meds`, med)
-        localStorage.setItem(`foods`, food)
-        localStorage.setItem(`houses`, house)
-        localStorage.setItem(`saves`, saving)
-        localStorage.setItem(`travels`, travel)
+    // addListener(`AAAAAAAAAA`,`click`, (eventData) => {
+    //     let = taxes
+    //     `tax`/`salaryinput` == taxes
+    //     let = med
+    //     `med`/`salaryinput` == med
+    //     let = food
+    //     `food`/`salaryinput` == food
+    //     let = house
+    //     `house`/`salaryinput` == house
+    //     let = savings
+    //     `savings`/`salaryinput` == saving
+    //     let = travel
+    //     `travel`/`salaryinput` == travel
+    //     localStorage.setItem('taxes', taxes)
+    //     localStorage.setItem(`meds`, med)
+    //     localStorage.setItem(`foods`, food)
+    //     localStorage.setItem(`houses`, house)
+    //     localStorage.setItem(`saves`, saving)
+    //     localStorage.setItem(`travels`, travel)
     
-    })
+    // })
 
 })
