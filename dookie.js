@@ -112,17 +112,29 @@ document.addEventListener(`DOMContentLoaded`, () => {
 
     addListener(`AAAAAAAAAA`, `click`, (eventData) => {
         console.log(`buttonClick`)
-        let taxes = tax.value
-        let med = medical.value
-        let meal = food.value
-        let homes = house.value
-        let holdings = saving.value
-        let trav = travel.value
+        let taxes = Math.round((tax.value*.12)*100)/100
+        let med = Math.round((medical.value*.0145)*100)/100
+        let meal = Math.round(Number(food.value)*100)/100
+        let homes = Math.round(Number(house.value)*100)/100
+        let holdings = Math.round(Number(saving.value)*100)/100
+        let trav = Math.round(Number(travel.value)*100)/100
         banana.data.datasets[0].data = [taxes, med, meal, homes, holdings, trav]
         banana.data.labels = [`taxes`, `med`, `meal`, `homes`, `holdings`, `trav`]
         banana.update()
+        console.log(typeof taxes)
+        console.log(taxes)
+        console.log(typeof med)
+        console.log(med)
+        console.log(typeof homes)
+        console.log(homes)
+        console.log(typeof holdings)
+        console.log(holdings)
+        console.log(typeof trav)
+        console.log(trav)
+        
+        console.log(holdings + med)
 
-        elementById(`Expenses`).innerText = `Total Expenses: $${taxes + med + meal + homes + holdings + trav}`
+        elementById(`Expenses`).innerText = `Total Expenses: $${Math.round((taxes + med + meal + homes + holdings + trav)*100)/100}`
     })                                                             // ^^ they add togther like 12648 instead of 21, fix
 })
 
